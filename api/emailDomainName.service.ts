@@ -95,7 +95,7 @@ export class EmailDomainNameService {
 
     /**
      * Get a list of email domain names
-     * @param name Name query parameter
+     * @param name Email domain name query parameter
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
