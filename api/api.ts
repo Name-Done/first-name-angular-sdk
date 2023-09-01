@@ -1,9 +1,13 @@
+export * from './domainName.service';
+import { DomainNameService } from './domainName.service';
 export * from './emailDomainName.service';
 import { EmailDomainNameService } from './emailDomainName.service';
 export * from './familyName.service';
 import { FamilyNameService } from './familyName.service';
+export * from './gender.service';
+import { GenderService } from './gender.service';
 export * from './givenName.service';
 import { GivenNameService } from './givenName.service';
 export * from './topLevelDomainName.service';
 import { TopLevelDomainNameService } from './topLevelDomainName.service';
-export const APIS = [EmailDomainNameService, FamilyNameService, GivenNameService, TopLevelDomainNameService];
+export const APIS = [DomainNameService, EmailDomainNameService, FamilyNameService, GenderService, GivenNameService, TopLevelDomainNameService];

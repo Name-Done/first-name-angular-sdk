@@ -3,8 +3,10 @@
 README.md
 api.module.ts
 api/api.ts
+api/domainName.service.ts
 api/emailDomainName.service.ts
 api/familyName.service.ts
+api/gender.service.ts
 api/givenName.service.ts
 api/topLevelDomainName.service.ts
 configuration.ts

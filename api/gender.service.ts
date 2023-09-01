@@ -32,7 +32,7 @@ import { Configuration }                                     from '../configurat
 @Injectable({
   providedIn: 'root'
 })
-export class EmailDomainNameService {
+export class GenderService {
 
     protected basePath = 'https://api.namedone.com';
     public defaultHeaders = new HttpHeaders();
@@ -94,17 +94,17 @@ export class EmailDomainNameService {
     }
 
     /**
-     * Get a list of email domain names
-     * @param name Email domain name query parameter
+     * Get a list of genders
+     * @param name Name query parameter
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getEmailDomainNames(name: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<NameResponseDto>;
-    public getEmailDomainNames(name: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<NameResponseDto>>;
-    public getEmailDomainNames(name: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<NameResponseDto>>;
-    public getEmailDomainNames(name: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public getGenders(name: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<NameResponseDto>;
+    public getGenders(name: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<NameResponseDto>>;
+    public getGenders(name: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<NameResponseDto>>;
+    public getGenders(name: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
         if (name === null || name === undefined) {
-            throw new Error('Required parameter name was null or undefined when calling getEmailDomainNames.');
+            throw new Error('Required parameter name was null or undefined when calling getGenders.');
         }
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
@@ -144,7 +144,7 @@ export class EmailDomainNameService {
             }
         }
 
-        let localVarPath = `/name/email-domain`;
+        let localVarPath = `/name/gender`;
         return this.httpClient.request<NameResponseDto>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
