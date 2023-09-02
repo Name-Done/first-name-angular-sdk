@@ -8,6 +8,7 @@ api/emailDomainName.service.ts
 api/familyName.service.ts
 api/gender.service.ts
 api/givenName.service.ts
+api/languageName.service.ts
 api/topLevelDomainName.service.ts
 configuration.ts
 encoder.ts

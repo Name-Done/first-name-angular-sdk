@@ -32,7 +32,7 @@ import { Configuration }                                     from '../configurat
 @Injectable({
   providedIn: 'root'
 })
-export class GenderService {
+export class LanguageNameService {
 
     protected basePath = 'https://api.namedone.com';
     public defaultHeaders = new HttpHeaders();
@@ -94,15 +94,15 @@ export class GenderService {
     }
 
     /**
-     * Get a list of genders
+     * Get a list of language names
      * @param name Name query parameter
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getGenders(name?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<NameResponseDto>;
-    public getGenders(name?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<NameResponseDto>>;
-    public getGenders(name?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<NameResponseDto>>;
-    public getGenders(name?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
+    public getLanguageNames(name?: string, observe?: 'body', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<NameResponseDto>;
+    public getLanguageNames(name?: string, observe?: 'response', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpResponse<NameResponseDto>>;
+    public getLanguageNames(name?: string, observe?: 'events', reportProgress?: boolean, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<HttpEvent<NameResponseDto>>;
+    public getLanguageNames(name?: string, observe: any = 'body', reportProgress: boolean = false, options?: {httpHeaderAccept?: 'application/json', context?: HttpContext}): Observable<any> {
 
         let localVarQueryParameters = new HttpParams({encoder: this.encoder});
         if (name !== undefined && name !== null) {
@@ -141,7 +141,7 @@ export class GenderService {
             }
         }
 
-        let localVarPath = `/name/gender`;
+        let localVarPath = `/name/language`;
         return this.httpClient.request<NameResponseDto>('get', `${this.configuration.basePath}${localVarPath}`,
             {
                 context: localVarHttpContext,
